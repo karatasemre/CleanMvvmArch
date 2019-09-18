@@ -28,4 +28,57 @@ dependencies {
 
     // Support Libraries
 
+    implementation deps.support.appcompat
+    implementation deps.support.cardview
+    implementation deps.support.recyclerview
+
+
+    // Arch components
+    implementation deps.archComponents.lifecycle_extensions
+    implementation deps.archComponents.constraint_layout
+
+
+    // Dagger
+    implementation deps.dagger.core
+    annotationProcessor deps.dagger.compiler
+    implementation deps.dagger.support
+    annotationProcessor deps.dagger.processor
+
+
+    // ---------- Butter Knife ----------
+    implementation deps.butterknife.core
+    annotationProcessor deps.butterknife.compiler
+
+
+    // ---------- Retrofit 2 ------------
+    implementation deps.retrofit2.core
+    implementation deps.retrofit2.converterGson
+    implementation deps.retrofit2.adapter_rxjava2
+    implementation deps.retrofit2.moshi
+    implementation deps.retrofit2.converter_moshi
+
+
+    // ----------- Room ------------
+    implementation deps.room.runtime
+    annotationProcessor deps.room.compiler
+    implementation deps.room.rxjava2
+    implementation deps.room.testing
+
+
+    // ---------- Rx Java 2 ------------
+    implementation deps.rxJava2.core
+    implementation deps.rxJava2.rxandroid
+
+
+    // ------------ Util -----------------
+    implementation deps.util.picasso
+
+
+    // --------- Android UI/UnitTest --------
+    testImplementation deps.test.junit
+    androidTestImplementation deps.test.support_test_runner
+    androidTestImplementation deps.test.espresso_core
+
+
+
 }
