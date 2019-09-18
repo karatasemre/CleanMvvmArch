@@ -1,8 +1,10 @@
-package com.e.cleanmvvmarch;
+package com.e.cleanmvvmarch.ui.main;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.e.cleanmvvmarch.R;
 
 public class MainActivity extends AppCompatActivity {
 
