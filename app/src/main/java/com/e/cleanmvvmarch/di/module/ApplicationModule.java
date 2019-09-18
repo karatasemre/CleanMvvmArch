@@ -1,5 +1,7 @@
 package com.e.cleanmvvmarch.di.module;
 
+import com.e.cleanmvvmarch.data.rest.ShoppingService;
+
 import javax.inject.Singleton;
 
 import dagger.Module;
@@ -20,5 +22,11 @@ public class ApplicationModule {
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
+    }
+
+    @Singleton
+    @Provides
+    static ShoppingService provideRetrofitService(Retrofit retrofit){
+        return retrofit.create(ShoppingService.class);
     }
 }

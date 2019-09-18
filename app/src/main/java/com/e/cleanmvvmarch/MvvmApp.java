@@ -1,6 +1,7 @@
 package com.e.cleanmvvmarch;
 
 import com.e.cleanmvvmarch.di.component.ApplicationComponent;
+import com.e.cleanmvvmarch.di.component.DaggerApplicationComponent;
 
 import dagger.android.AndroidInjector;
 import dagger.android.DaggerApplication;
@@ -14,9 +15,8 @@ public class MvvmApp extends DaggerApplication {
 
     @Override
     protected AndroidInjector<? extends DaggerApplication> applicationInjector() {
-        /*ApplicationComponent component = DaggerApplicationComponent.builder().application(this).build();
+        ApplicationComponent component = DaggerApplicationComponent.builder().application(this).build();
         component.inject(this);
-        return component;*/
-        return null;
+        return component;
     }
 }

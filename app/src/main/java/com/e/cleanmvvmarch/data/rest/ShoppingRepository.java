@@ -1,6 +1,7 @@
 package com.e.cleanmvvmarch.data.rest;
 
 import com.e.cleanmvvmarch.data.model.Product;
+import com.e.cleanmvvmarch.data.model.Products;
 
 import javax.inject.Inject;
 
@@ -15,7 +16,7 @@ public class ShoppingRepository {
         this.shoppingService = shoppingService;
     }
 
-    public Single<Product> getProducts(){
+    public Single<Products> getProducts(){
         return shoppingService.getProductList();
     }
 
