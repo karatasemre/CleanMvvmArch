@@ -1,0 +1,108 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+        
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.4.0'
+        classpath 'com.jakewharton:butterknife-gradle-plugin:10.1.0'
+        
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url 'https://kotlin.bintray.com/kotlinx/' }
+    }
+
+    ext.versions = [
+            daggerVersion           : "2.22.1",
+            butterKnifeVersion      : "10.1.0",
+            retrofitVersion         : "2.3.0",
+            rxJavaVersion           : "2.0.1",
+            supportVersion          : "1.0.0",
+            moshiVersion            : "1.5.0",
+            jUnitVersion            : "4.12",
+            testRunnerVersion       : "1.0.2",
+            espressoVersion         : "3.0.2",
+            glideVersion            : "4.9.0",
+            room                    : "2.1.0-alpha06",
+            lifecycleVersion        : "2.0.0",
+            constraintLayoutVersion : "1.1.2",
+            picassoVersion          : "2.71828",
+    ]
+
+    ext.deps = [
+
+            support : [
+                    appcompat       : "androidx.appcompat:appcompat:${versions.supportVersion}",
+                    cardview        : "androidx.cardview:cardview:${versions.supportVersion}",
+                    recyclerview    : "androidx.recyclerview:recyclerview:${versions.supportVersion}",
+            ],
+
+            archComponents: [
+                    lifecycle_extensions    : "androidx.lifecycle:lifecycle-extensions:${versions.lifecycleVersion}",
+                    constraint_layout       : "androidx.constraintlayout:constraintlayout:${versions.constraintLayoutVersion}"
+            ],
+
+            room : [
+                    runtime : "androidx.room:room-runtime:${versions.room}",
+                    compiler: "androidx.room:room-compiler:${versions.room}",
+                    rxjava2 : "androidx.room:room-rxjava2:${versions.room}",
+                    testing : "androidx.room:room-testing:${versions.room}"
+            ],
+
+            dagger        : [
+                    core     : "com.google.dagger:dagger:${versions.daggerVersion}",
+                    compiler : "com.google.dagger:dagger-compiler:${versions.daggerVersion}",
+                    support  : "com.google.dagger:dagger-android-support:${versions.daggerVersion}",
+                    processor: "com.google.dagger:dagger-android-processor:${versions.daggerVersion}"
+            ],
+
+            butterknife   : [
+                    core    : "com.jakewharton:butterknife:${versions.butterKnifeVersion}",
+                    compiler: "com.jakewharton:butterknife-compiler:${versions.butterKnifeVersion}"
+            ],
+
+            retrofit2     : [
+
+                    core           : "com.squareup.retrofit2:retrofit:${versions.retrofitVersion}",
+                    converterGson  : "com.squareup.retrofit2:converter-gson:${versions.retrofitVersion}",
+                    adapter_rxjava2: "com.squareup.retrofit2:adapter-rxjava2:${versions.retrofitVersion}",
+                    moshi          : "com.squareup.moshi:moshi:${versions.moshiVersion}",
+                    converter_moshi: "com.squareup.retrofit2:converter-moshi:${versions.retrofitVersion}"
+            ],
+
+            rxJava2       : [
+
+                    core     : "io.reactivex.rxjava2:rxjava:${versions.rxJavaVersion}",
+                    rxandroid: "io.reactivex.rxjava2:rxandroid:${versions.rxJavaVersion}"
+
+            ],
+
+            util          : [
+
+                    picasso: "com.squareup.picasso:picasso:${versions.picassoVersion}"
+
+            ],
+
+            test          : [
+
+                    junit              : "junit:junit:${versions.jUnitVersion}",
+                    support_test_runner: "com.android.support.test:runner:${versions.testRunnerVersion}",
+                    espresso_core      : "com.android.support.test.espresso:espresso-core:${versions.espressoVersion}"
+
+            ]
+    ]
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
