@@ -1,16 +1,25 @@
 package com.e.cleanmvvmarch.ui.main;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
-import com.e.cleanmvvmarch.R;
+import androidx.annotation.Nullable;
 
-public class MainActivity extends AppCompatActivity {
+import com.e.cleanmvvmarch.R;
+import com.e.cleanmvvmarch.base.BaseActivity;
+import com.e.cleanmvvmarch.ui.shoppingList.ShoppingListFragment;
+public class MainActivity extends BaseActivity {
+
+    @Override
+    protected int layoutRes() {
+        return R.layout.activity_main;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        if(savedInstanceState == null)
+            getSupportFragmentManager().beginTransaction().add(R.id.screenContainer, new ShoppingListFragment()).commit();
     }
+
 }
+
