@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.e.cleanmvvmarch.di.util.ViewModelKey;
+import com.e.cleanmvvmarch.ui.basket.BasketPageViewModel;
 import com.e.cleanmvvmarch.ui.shopDetail.ProductDetailsViewModel;
 import com.e.cleanmvvmarch.ui.shoppingList.ShoppingListViewModel;
 import com.e.cleanmvvmarch.util.ViewModelFactory;
@@ -24,7 +25,14 @@ public abstract class ViewModelModule {
     @Binds
     @IntoMap
     @ViewModelKey(ProductDetailsViewModel.class)
-    abstract ViewModel bindBasketPageViewModel(ProductDetailsViewModel productDetailsViewModel);
+    abstract ViewModel bindProductDetailsViewModel(ProductDetailsViewModel productDetailsViewModel);
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(BasketPageViewModel.class)
+    abstract ViewModel bindBasketPageViewModel(BasketPageViewModel basketPageViewModel);
+
+
 
     @Binds
     abstract ViewModelProvider.Factory bindViewModelFactory(ViewModelFactory factory);

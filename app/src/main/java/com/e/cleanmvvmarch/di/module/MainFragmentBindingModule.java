@@ -1,5 +1,6 @@
 package com.e.cleanmvvmarch.di.module;
 
+import com.e.cleanmvvmarch.ui.basket.BasketPageFragment;
 import com.e.cleanmvvmarch.ui.shopDetail.ProductDetailsFragment;
 import com.e.cleanmvvmarch.ui.shoppingList.ShoppingListFragment;
 
@@ -14,4 +15,7 @@ public abstract class MainFragmentBindingModule {
 
     @ContributesAndroidInjector
     abstract ProductDetailsFragment provideProductDetailsFragment();
+
+    @ContributesAndroidInjector
+    abstract BasketPageFragment provideBasketPageFragment();
 }

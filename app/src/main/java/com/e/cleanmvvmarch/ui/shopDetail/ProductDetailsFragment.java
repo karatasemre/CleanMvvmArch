@@ -8,11 +8,14 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.e.cleanmvvmarch.R;
 import com.e.cleanmvvmarch.base.BaseFragment;
 import com.e.cleanmvvmarch.data.model.Product;
+import com.e.cleanmvvmarch.ui.basket.BasketPageFragment;
 import com.e.cleanmvvmarch.util.ViewModelFactory;
 import com.squareup.picasso.Picasso;
 
@@ -81,6 +84,14 @@ public class ProductDetailsFragment extends BaseFragment {
             productDetailsViewModel.addItemToBasket(mProduct);
         });
 
+
+        basketButton.setOnClickListener( trolleyButtonView -> {
+            FragmentManager fm = getFragmentManager();
+            FragmentTransaction fragmentTransaction = fm.beginTransaction();
+            fragmentTransaction.add(R.id.screenContainer, BasketPageFragment.getInstance());
+            fragmentTransaction.addToBackStack(null);
+            fragmentTransaction.commit();
+        });
 
 
 
