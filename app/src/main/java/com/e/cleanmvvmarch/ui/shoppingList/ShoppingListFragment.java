@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 import com.e.cleanmvvmarch.R;
 import com.e.cleanmvvmarch.base.BaseFragment;
 import com.e.cleanmvvmarch.data.model.Product;
+import com.e.cleanmvvmarch.ui.shopDetail.ProductDetailsFragment;
 import com.e.cleanmvvmarch.util.ViewModelFactory;
 
 import javax.inject.Inject;
@@ -39,7 +40,7 @@ public class ShoppingListFragment extends BaseFragment implements ProductSelecti
 
     @Override
     protected int layoutRes() {
-        return R.layout.fragment_shopiing_list;
+        return R.layout.fragment_shopping_list;
     }
 
     @Override
@@ -50,7 +51,7 @@ public class ShoppingListFragment extends BaseFragment implements ProductSelecti
 
         shoppingListRecyclerView.setAdapter(new ShoppingListAdapter(shoppingListViewModel, this, this));
         shoppingListRecyclerView.setLayoutManager(new StaggeredGridLayoutManager(NO_OF_COLUMNS, StaggeredGridLayoutManager.VERTICAL));
-
+        observableViewModel();
 
     }
 
@@ -85,15 +86,14 @@ public class ShoppingListFragment extends BaseFragment implements ProductSelecti
 
             }
         });
-
     }
 
     @Override
     public void onProductSelected(Product product) {
-        /*FragmentManager fm = getFragmentManager();
+        FragmentManager fm = getFragmentManager();
         FragmentTransaction fragmentTransaction = fm.beginTransaction();
         fragmentTransaction.add(R.id.screenContainer, ProductDetailsFragment.getInstance(product));
         fragmentTransaction.addToBackStack(null);
-        fragmentTransaction.commit();*/
+        fragmentTransaction.commit();
     }
 }

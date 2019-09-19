@@ -53,28 +53,22 @@ public class ShoppingListViewModel extends ViewModel {
 
     void fetchData() {
         loading.setValue(true);
-
-        Disposable disposable = mShoppingRepository.getProducts().subscribeOn(Schedulers.io())
+        mCompositeDisposable.add(mShoppingRepository.getProducts().subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread()).subscribeWith(new DisposableSingleObserver<Products>() {
                     @Override
                     public void onSuccess(Products products) {
                         repoLoadError.setValue(false);
                         productList.setValue(products.products);
                         loading.setValue(false);
-
                     }
 
                     @Override
                     public void onError(Throwable e) {
                         repoLoadError.setValue(true);
                         loading.setValue(false);
-
                     }
-                });
-        mCompositeDisposable.add(disposable);
-
+                }));
     }
-
     Context getContext() {
         return mContext;
     }
