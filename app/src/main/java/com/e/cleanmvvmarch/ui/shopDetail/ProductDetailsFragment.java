@@ -1,7 +1,9 @@
 package com.e.cleanmvvmarch.ui.shopDetail;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -78,6 +80,7 @@ public class ProductDetailsFragment extends BaseFragment {
         productNameDetailTextView.setText(mProduct.getName());
         productPriceDetailTextView.setText(mProduct.getPrice());
 
+
         observableViewModel();
 
         addRemoveFromCartButton.setOnClickListener(addToCartView -> {
@@ -88,14 +91,13 @@ public class ProductDetailsFragment extends BaseFragment {
         basketButton.setOnClickListener( trolleyButtonView -> {
             FragmentManager fm = getFragmentManager();
             FragmentTransaction fragmentTransaction = fm.beginTransaction();
-            fragmentTransaction.add(R.id.screenContainer, BasketPageFragment.getInstance());
+            fragmentTransaction.replace(R.id.screenContainer, BasketPageFragment.getInstance());
             fragmentTransaction.addToBackStack(null);
             fragmentTransaction.commit();
         });
 
-
-
     }
+
 
     private void observableViewModel() {
         productDetailsViewModel.getProductList().observe(this, product -> {
@@ -105,6 +107,4 @@ public class ProductDetailsFragment extends BaseFragment {
             }
         });
     }
-
-
 }
