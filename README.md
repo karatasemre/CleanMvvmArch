@@ -1,5 +1,7 @@
 # CleanMvvmArch
 
+Mvvm clean architecture + Retrofit2 + RxJava2 + Room + LiveData + Dagger2 + Butterknife + Glide + Picasso + ConstraintLayout
+
 <img src="hhttps://user-images.githubusercontent.com/7110339/65248537-fc3c4c00-dafa-11e9-97f3-0b6fb1283fba.png" width="200" height="400"> 
 
 ## Questions?🤔
