@@ -1,6 +1,6 @@
 # CleanMvvmArch
 
-Mvvm clean architecture + Retrofit2 + RxJava2 + Room + LiveData + Dagger2 + Butterknife + Glide + Picasso + ConstraintLayout
+Mvvm Clean Architecture + Retrofit2 + RxJava2 + Room + LiveData + Dagger2 + Butterknife + Glide + Picasso + ConstraintLayout
 
 + Clean Gradle Structure
 
