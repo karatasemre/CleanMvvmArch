@@ -2,12 +2,12 @@
     <string name="app_name">CleanMvvmArch</string>
     <string name="price_place_holder">Ücret : $%s</string>
     <string name="generic_error_statement">Data yüklenirken bir hata meydana geldi!</string>
-    <string name="no_items_error_statement">Looks like you haven\'t added any , go back and add few items. We will be waiting here :-) </string>
+    <string name="no_items_error_statement">Listeye bir şeyler eklememişsiniz. Geri dön ve listeye ürün ekleyin :-) </string>
     <string name="add_to_cart">Sepete Ekle</string>
     <string name="checkout">Sepet(%s)</string>
     <string name="pay_now">Ödeme yap</string>
     <string name="summary">Özet</string>
-    <string name="no_of_items">No.Of Items : %s</string>
+    <string name="no_of_items">Adet : %s</string>
     <string name="net_total">Toplam : %s</string>
-    <string name="to_be_continued"> Devam edecek</string>
+    <string name="to_be_continued"> Ödeme yapıldı</string>
 </resources>
