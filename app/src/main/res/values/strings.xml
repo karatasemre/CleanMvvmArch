@@ -1,13 +1,13 @@
 <resources>
     <string name="app_name">CleanMvvmArch</string>
-    <string name="price_place_holder">Price : $%s</string>
-    <string name="generic_error_statement">An Error Occurred While Loading Data!</string>
+    <string name="price_place_holder">Ücret : $%s</string>
+    <string name="generic_error_statement">Data yüklenirken bir hata meydana geldi!</string>
     <string name="no_items_error_statement">Looks like you haven\'t added any , go back and add few items. We will be waiting here :-) </string>
-    <string name="add_to_cart">Add to Cart</string>
-    <string name="checkout">Basket(%s)</string>
-    <string name="pay_now">Pay Now</string>
-    <string name="summary">Summary</string>
+    <string name="add_to_cart">Sepete Ekle</string>
+    <string name="checkout">Sepet(%s)</string>
+    <string name="pay_now">Ödeme yap</string>
+    <string name="summary">Özet</string>
     <string name="no_of_items">No.Of Items : %s</string>
-    <string name="net_total">Net Total : %s</string>
-    <string name="to_be_continued"> To be Continued</string>
+    <string name="net_total">Toplam : %s</string>
+    <string name="to_be_continued"> Devam edecek</string>
 </resources>
