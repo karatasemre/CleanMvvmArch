@@ -28,7 +28,7 @@ public class BasketPageFragment extends BaseFragment implements BasketItemAction
     RecyclerView trolley_list_recycler_view;
     @BindView(R.id.generic_error_text_view)
     TextView generic_error_text_view;
-    @BindView(R.id.loading_progress_view)
+    @BindView(R.id.basket_page_loading_progress_view)
     View loadingView;
     @BindView(R.id.summary_layout)
     ConstraintLayout summary_layout;

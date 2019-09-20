@@ -33,25 +33,25 @@ public class ShoppingListViewModel extends ViewModel {
     private final MutableLiveData<Boolean> loading = new MutableLiveData<>();
 
     @Inject
-    ShoppingListViewModel(ShoppingRepository shoppingRepository, Context context) {
+    public ShoppingListViewModel(ShoppingRepository shoppingRepository, Context context) {
         mShoppingRepository = shoppingRepository;
         mContext = context;
         mCompositeDisposable = new CompositeDisposable();
     }
 
-    LiveData<List<Product>> getProductList() {
+    public LiveData<List<Product>> getProductList() {
         return productList;
     }
 
-    LiveData<Boolean> getError() {
+    public LiveData<Boolean> getError() {
         return repoLoadError;
     }
 
-    LiveData<Boolean> getLoading() {
+    public LiveData<Boolean> getLoading() {
         return loading;
     }
 
-    void fetchData() {
+    public void fetchData() {
         loading.setValue(true);
         mCompositeDisposable.add(mShoppingRepository.getProducts().subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread()).subscribeWith(new DisposableSingleObserver<Products>() {
@@ -69,7 +69,7 @@ public class ShoppingListViewModel extends ViewModel {
                     }
                 }));
     }
-    Context getContext() {
+    public Context getContext() {
         return mContext;
     }
 

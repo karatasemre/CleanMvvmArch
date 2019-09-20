@@ -31,12 +31,13 @@ allprojects {
             moshiVersion            : "1.5.0",
             jUnitVersion            : "4.12",
             testRunnerVersion       : "1.0.2",
-            espressoVersion         : "3.0.2",
+            espressoVersion         : "3.1.0",
             glideVersion            : "4.9.0",
             room                    : "2.1.0-alpha04",
             lifecycleVersion        : "2.0.0",
             constraintLayoutVersion : "1.1.2",
             picassoVersion          : "2.71828",
+            mockitoVersion          : "1.10.19",
     ]
 
     ext.deps = [
@@ -96,10 +97,12 @@ allprojects {
             test          : [
 
                     junit              : "junit:junit:${versions.jUnitVersion}",
+                    mockito            : "org.mockito:mockito-core:${versions.mockitoVersion}",
                     support_test_runner: "com.android.support.test:runner:${versions.testRunnerVersion}",
+                    support_test_rules: "com.android.support.test:rules:${versions.testRunnerVersion}",
                     espresso_core      : "com.android.support.test.espresso:espresso-core:${versions.espressoVersion}"
-
             ]
+
     ]
 }
 

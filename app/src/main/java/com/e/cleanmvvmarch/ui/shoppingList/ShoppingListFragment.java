@@ -28,7 +28,7 @@ public class ShoppingListFragment extends BaseFragment implements ProductSelecti
     RecyclerView shoppingListRecyclerView;
     @BindView(R.id.generic_error_text_view)
     TextView genericErrorTextView;
-    @BindView(R.id.loading_progress_view)
+    @BindView(R.id.shopping_loading_progress_view)
     View loadingView;
 
     private static final int NO_OF_COLUMNS = 2;

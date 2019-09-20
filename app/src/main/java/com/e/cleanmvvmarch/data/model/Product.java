@@ -13,6 +13,7 @@ public class Product implements Parcelable {
 
     private float rating;
 
+
     protected Product(Parcel in) {
         name = in.readString();
         price = in.readString();
@@ -76,4 +77,6 @@ public class Product implements Parcelable {
         parcel.writeString(image_url);
         parcel.writeFloat(rating);
     }
+
+
 }

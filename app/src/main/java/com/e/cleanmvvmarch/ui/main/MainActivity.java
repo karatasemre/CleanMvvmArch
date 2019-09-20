@@ -2,7 +2,6 @@ package com.e.cleanmvvmarch.ui.main;
 
 import android.os.Bundle;
 
-import androidx.annotation.Nullable;
 
 import com.e.cleanmvvmarch.R;
 import com.e.cleanmvvmarch.base.BaseActivity;

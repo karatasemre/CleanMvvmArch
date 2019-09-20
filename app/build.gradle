@@ -75,7 +75,9 @@ dependencies {
 
     // --------- Android UI/UnitTest --------
     testImplementation deps.test.junit
+    testImplementation deps.test.mockito
     androidTestImplementation deps.test.support_test_runner
+    androidTestImplementation deps.test.support_test_rules
     androidTestImplementation deps.test.espresso_core
 
 
